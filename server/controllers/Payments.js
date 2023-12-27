@@ -8,6 +8,7 @@ const {
   courseEnrollmentEmail,
 } = require("../mail/templates/courseEnrollmentEmail")
 const { paymentSuccessEmail } = require("../mail/templates/paymentSuccessEmail")
+const CourseProgress = require("../models/CourseProgress")
 // const CourseProgress = require("../models/CourseProgress")
 
 
@@ -23,13 +24,11 @@ exports.capturePayment = async(req,res)=>{
         let course;
         try{
             course = await Course.findById(course_id);
-            console.log("🚀 ~ file: Payments.js:27 ~ exports.capturePayment=async ~ course:", course)
             if(!course)
             {
                 return res.status(200).json({success:false,message:"could not find the Course"});
             }
             const uid = new mongoose.Types.ObjectId(userId);
-            console.log("🚀 ~ file: Payments.js:33 ~ exports.capturePayment=async ~ uid:", uid)
             if(course.studentsEnrolled.includes(uid)){
                 return res.status(200).json({success:true,message:"Student is alredy Enrolled"});
             }
@@ -97,11 +96,16 @@ const enrolledStudents = async(courses,userId,res)=>{
         {
             return res.status(500).json({success:false,message:"course Not Found"})
         }
-
+        const courseProgress = await CourseProgress.create({
+            courseID: courseId,
+            userId: userId,
+            completedVideos: [],
+          })
         // find the student and add the course to their list of enrollledCourses
         const enrolledStudent =  await User.findByIdAndUpdate(userId,
             {$push:{
                 courses:courseId, 
+                courseProgress: courseProgress._id,
             }},
             {new:true})
 
@@ -111,7 +115,6 @@ const enrolledStudents = async(courses,userId,res)=>{
             `Successfully Enrolled into ${enrolledCourse.courseName}`,
             courseEnrollmentEmail(enrolledCourse.courseName,`${enrolledStudent.firstName}`)
         )
-        console.log("Email sent Successfully",emailResponse)
     }
 }
 exports.sendPaymentSuccessEmail = async(req,res)=>{

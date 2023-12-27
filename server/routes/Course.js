@@ -33,7 +33,7 @@ const {
     deleteSubSection,
   } = require("../controllers/Subsection")
   
-
+const {updateCourseProgress} = require("../controllers/courseProgress")
 router.post("/createCategory",auth,isAdmin,createCategory)
 router.post("/createCourse", auth, isInstructor, createCourse)
 router.post("/editCourse", auth, isInstructor, editCourse)
@@ -58,4 +58,6 @@ router.post("/getCategoryPageDetails",categoryPageDetails)
 router.post("/createRating",auth,isStudent,createRating)
 router.get("/getAverageRating",getAverageRating)
 router.get("/getReviews",getAllRating)
+router.post("/updateCourseProgress",auth,isStudent,updateCourseProgress)
+// router.post("/getProgressPercentage", auth, isStudent, getProgressPercentage)
 module.exports = router

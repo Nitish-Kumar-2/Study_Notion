@@ -8,10 +8,10 @@ import { BigPlayButton, Player } from "video-react"
 
 import { markLectureAsComplete } from "../../../services/operations/courseDetailsAPI"
 import { updateCompletedLectures } from "../../../slices/viewCourseSlice"
-import IconBtn from "../../common/IconBtn"
+import IconBtn from "../../Common/IconBtn"
 
 const VideoDetails = () => {
-  const { courseId, sectionId, subSectionId } = useParams()
+  const { courseId, sectionId, subSectionId } = useParams();
   const navigate = useNavigate()
   const location = useLocation()
   const playerRef = useRef(null)
@@ -40,7 +40,7 @@ const VideoDetails = () => {
           (data) => data._id === subSectionId
         )
         // console.log("filteredVideoData", filteredVideoData)
-        setVideoData(filteredVideoData[0])
+        setVideoData(filteredVideoData[0]?filteredVideoData[0]:null)
         setPreviewSource(courseEntireData.thumbnail)
         setVideoEnded(false)
       }

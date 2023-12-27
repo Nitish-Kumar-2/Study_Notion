@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react"
 // Icons
-import { FaRegStar, FaStar } from "react-icons/fa"
-import ReactStars from "react-rating-stars-component"
+// import { FaRegStar, FaStar } from "react-icons/fa"
+// import ReactStars from "react-rating-stars-component"
 import { Link } from "react-router-dom"
 
 import GetAvgRating from "../../../utils/avgRating"
-import RatingStars from "../../common/RatingStars"
+import RatingStars from "../../Common/RatingStars"
 
 function Course_Card({ course, Height }) {
   // const avgReviewCount = GetAvgRating(course.ratingAndReviews)

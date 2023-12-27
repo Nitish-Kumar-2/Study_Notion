@@ -1,7 +1,5 @@
 // Importing React hook for managing component state
 import { useEffect, useState } from "react"
-// Importing React icon component
-import { MdClose } from "react-icons/md"
 import { useSelector } from "react-redux"
 
 // Defining a functional component ChipInput
@@ -13,7 +11,7 @@ export default function ChipInput({
   register,
   errors,
   setValue,
-  getValues,
+  // getValues,
 }) {
   const { editCourse, course } = useSelector((state) => state.course)
 

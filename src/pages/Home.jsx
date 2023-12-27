@@ -4,10 +4,10 @@ import HighlightText from "../components/core/HomePage/HighlightText";
 import CTAButton from "../components/core/HomePage/Button";
 import Banner from "../assets/Images/banner.mp4";
 import CodeBlocks from "../components/core/HomePage/CodeBlocks";
-import Footer from "../components/common/Footer";
-import ExploreMore from "../components/core/HomePage/ExploreMore"
+import Footer from "../components/Common/Footer";
+import ExploreMore from "../components/core/HomePage/ExploreMore";
 
-// import ReviewSlider from "../components/common/ReviewSlider";
+import ReviewSlider from "../components/Common/ReviewSlider";
 import LearningLanguageSection from "../components/core/HomePage/LearningLanguageSection";
 import TimelineSection from "../components/core/HomePage/Timeline";
 import InstructorSection from "../components/core/HomePage/InstructorSection";
@@ -115,8 +115,8 @@ function Home() {
             backgroundGradient={<div className="codeblock2 absolute"></div>}
           />
         </div>
-         {/* Explore Section */}
-         <ExploreMore />
+        {/* Explore Section */}
+        <ExploreMore />
       </div>
       {/* Section 2 */}
       <div className="bg-pure-greys-5 w-screen   text-richblack-700">
@@ -163,15 +163,17 @@ function Home() {
           <LearningLanguageSection />
         </div>
       </div>
-      {/* Section 3 */} 
+      {/* Section 3 */}
       <div className="relative mx-auto my-20 flex h-11/12 max-w-maxContent flex-col items-center justify-between gap-8 bg-richblack-900 text-white">
         {/* Become a instructor section */}
         <InstructorSection />
-
         {/* Reviws from Other Learner */}
         <h1 className="text-center text-4xl font-semibold mt-8">
           Reviews from other learners
         </h1>
+      </div>
+      <div className="md:px-20">
+        <ReviewSlider />
       </div>
       {/* Footer */}
       <Footer />

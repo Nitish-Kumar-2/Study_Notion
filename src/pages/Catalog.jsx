@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom"
 
 // import CourseCard from "../components/Catalog/CourseCard"
 // import CourseSlider from "../components/Catalog/CourseSlider"
-import Footer from "../components/common/Footer"
+import Footer from "../components/Common/Footer"
 import Course_Card from "../components/core/Catalog/Course_Card"
 import Course_Slider from "../components/core/Catalog/Course_Slider"
 import { apiConnector } from "../services/apiConnector"
@@ -23,11 +23,11 @@ function Catalog() {
     ;(async () => {
       try {
         const res = await apiConnector("GET", categories.CATEGORIES_API)
-        console.log("🚀 ~ file: Catalog.jsx:26 ~ ; ~ res:", res)
+        // console.log("🚀 ~ file: Catalog.jsx:26 ~ ; ~ res:", res)
         const category_id = res?.data?.data?.filter(
           (ct) => ct.name.split(" ").join("-").toLowerCase() === catalogName
         )[0]._id
-        console.log("🚀 ~ file: Catalog.jsx:30 ~ ; ~ category_id:", category_id)
+        // console.log("🚀 ~ file: Catalog.jsx:30 ~ ; ~ category_id:", category_id)
         setCategoryId(category_id)
       } catch (error) {
         console.log("Could not fetch Categories.", error)
@@ -40,7 +40,7 @@ function Catalog() {
       ;(async () => {
         try {
           const res = await getCatalogPageData(categoryId)
-          console.log("🚀 ~ file: Catalog.jsx:43 ~ ; ~ res:", res)
+          // console.log("🚀 ~ file: Catalog.jsx:43 ~ ; ~ res:", res)
           setCatalogPageData(res)
         } catch (error) {
           console.log(error)

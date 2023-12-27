@@ -14,6 +14,6 @@ function convertSecondsToDuration(totalSeconds) {
   }
   
   module.exports = {
-    convertSecondsToDuration,
+    convertSecondsToDuration
   }
   

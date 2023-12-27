@@ -3,7 +3,7 @@ import { FiUpload } from "react-icons/fi"
 import { useDispatch, useSelector } from "react-redux"
 
 import { updateDisplayPicture } from "../../../../services/operations/SettingsAPI"
-import IconBtn from "../../../common/IconBtn"
+import IconBtn from "../../../Common/IconBtn"
 
 export default function ChangeProfilePicture() {
   const { token } = useSelector((state) => state.auth)
@@ -39,7 +39,7 @@ export default function ChangeProfilePicture() {
 
   const handleFileUpload = () => {
     try {
-      console.log("uploading...")
+      // console.log("uploading...")
       setLoading(true)
       const formData = new FormData()
       formData.append("displayPicture", imageFile)

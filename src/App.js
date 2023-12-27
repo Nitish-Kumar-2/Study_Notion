@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Route, Routes, useNavigate } from "react-router-dom";
 
 // Components
-import Navbar from "./components/common/Navbar";
+import Navbar from "./components/Common/Navbar";
 import OpenRoute from "./components/core/Auth/OpenRoute";
 import PrivateRoute from "./components/core/Auth/PrivateRoute";
 import AddCourse from "./components/core/Dashboard/AddCourse"
@@ -36,6 +36,7 @@ import About from "./pages/About";
 import { ACCOUNT_TYPE } from "./utils/constants";
 import Catalog from "./pages/Catalog";
 import CourseDetails from "./pages/CourseDetails";
+import Instructor from "./components/core/Dashboard/Instructor";
 
 function App() {
   const dispatch = useDispatch();
@@ -112,6 +113,8 @@ function App() {
           <Route path="dashboard/settings" element={<Settings />} />
           {user?.accountType === ACCOUNT_TYPE.INSTRUCTOR && (
             <>
+
+              <Route path="dashboard/instructor" element={<Instructor />} />
               <Route path="dashboard/my-courses" element={<MyCourses />} />
               <Route path="dashboard/add-course" element={<AddCourse />} />
               <Route path="dashboard/edit-course/:courseId" element={<EditCourse />} />

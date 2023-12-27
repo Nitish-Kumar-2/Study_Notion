@@ -4,14 +4,13 @@ import { IoIosArrowBack } from "react-icons/io"
 import { useSelector } from "react-redux"
 import { useLocation, useNavigate, useParams } from "react-router-dom"
 
-import IconBtn from "../../common/IconBtn"
-
+import IconBtn from "../../Common/IconBtn"
 export default function VideoDetailsSidebar({ setReviewModal }) {
-  const [activeStatus, setActiveStatus] = useState("")
-  const [videoBarActive, setVideoBarActive] = useState("")
-  const navigate = useNavigate()
-  const location = useLocation()
-  const { sectionId, subSectionId } = useParams()
+  const [activeStatus, setActiveStatus] = useState("");
+  const [videoBarActive, setVideoBarActive] = useState(""); 
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { sectionId, subSectionId } = useParams();
   const {
     courseSectionData,
     courseEntireData,
@@ -21,7 +20,7 @@ export default function VideoDetailsSidebar({ setReviewModal }) {
 
   useEffect(() => {
     ;(() => {
-      if (!courseSectionData.length) return
+      if (!courseSectionData.length) return;
       const currentSectionIndx = courseSectionData.findIndex(
         (data) => data._id === sectionId
       )
@@ -58,8 +57,8 @@ export default function VideoDetailsSidebar({ setReviewModal }) {
               onclick={() => setReviewModal(true)}
             />
           </div>
-          <div className="flex flex-col">
-            <p>{courseEntireData?.courseName}</p>
+          <div clas sName="flex flex-col">
+            <p> {courseEntireData?.courseName} </p>
             <p className="text-sm font-semibold text-richblack-500">
               {completedLectures?.length} / {totalNoOfLectures}
             </p>

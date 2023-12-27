@@ -41,7 +41,6 @@ exports.createRating = async (req,res)=>{
 
                                         }
                                     },{new:true});
-    console.log("🚀 ~ file: RatingAndReview.js:43 ~ exports.createRating= ~ updatedCourseDetails:", updatedCourseDetails)
 
     return res.status(200).json({
         success:true,

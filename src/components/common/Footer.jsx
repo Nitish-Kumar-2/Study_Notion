@@ -67,9 +67,9 @@ const Footer = () => {
                       key={index}
                       className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200"
                     >
-                      <Link to={ele.split(" ").join("-").toLowerCase()}>
-                        {ele}
-                      </Link>
+                    {ele}
+                     {/* <Link to={ele.split(" ").join("-").toLowerCase()}>
+                  </Link>*/}
                     </div>
                   );
                 })}
@@ -95,9 +95,7 @@ const Footer = () => {
                       key={index}
                       className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200"
                     >
-                      <Link to={ele.split(" ").join("-").toLowerCase()}>
                         {ele}
-                      </Link>
                     </div>
                   );
                 })}
@@ -113,9 +111,8 @@ const Footer = () => {
                       key={index}
                       className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200"
                     >
-                      <Link to={ele.split(" ").join("-").toLowerCase()}>
                         {ele}
-                      </Link>
+                     
                     </div>
                   );
                 })}
@@ -164,15 +161,15 @@ const Footer = () => {
                       : "border-r border-richblack-700 cursor-pointer hover:text-richblack-50 transition-all duration-200"
                   } px-3 `}
                 >
+                {ele}
                   <Link to={ele.split(" ").join("-").toLocaleLowerCase()}>
-                    {ele}
                   </Link>
                 </div>
               );
             })}
           </div>
 
-          <div className="text-center">Made with ❤️ CodeHelp © 2023 Studynotion</div>
+          <div className="text-center">Made with ❤️ Nitish Kumar © 2023 Studynotion</div>
         </div>
       </div>
     </div>
