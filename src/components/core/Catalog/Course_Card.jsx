@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 
 import GetAvgRating from "../../../utils/avgRating"
-import RatingStars from "../../common/RatingStars"
+import RatingStars from "../../Common/RatingStars"
 
 function Course_Card({ course, Height }) {
   // const avgReviewCount = GetAvgRating(course.ratingAndReviews)
