@@ -4,10 +4,10 @@ import HighlightText from "../components/core/HomePage/HighlightText";
 import CTAButton from "../components/core/HomePage/Button";
 import Banner from "../assets/Images/banner.mp4";
 import CodeBlocks from "../components/core/HomePage/CodeBlocks";
-import Footer from "../components/Common/Footer";
+import Footer from "../components/common/Footer";
 import ExploreMore from "../components/core/HomePage/ExploreMore";
 
-import ReviewSlider from "../components/Common/ReviewSlider";
+import ReviewSlider from "../components/common/ReviewSlider";
 import LearningLanguageSection from "../components/core/HomePage/LearningLanguageSection";
 import TimelineSection from "../components/core/HomePage/Timeline";
 import InstructorSection from "../components/core/HomePage/InstructorSection";
