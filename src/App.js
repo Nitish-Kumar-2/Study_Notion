@@ -28,6 +28,7 @@ import ForgotPassword from "./pages/ForgotPassword";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import Live from "./pages/Live"
 import UpdatePassword from "./pages/UpdatePassword";
 import VerifyEmail from "./pages/VerifyEmail";
 import ViewCourse from "./pages/ViewCourse"
@@ -91,6 +92,30 @@ function App() {
             <OpenRoute>
               <Signup />
             </OpenRoute>
+          }
+        />
+        <Route
+          path="verify-email"
+          element={
+            <OpenRoute>
+              <VerifyEmail />
+            </OpenRoute>
+          }
+        />
+        <Route
+          element={
+            <PrivateRoute>
+              <Dashboard />
+            </PrivateRoute>
+          }
+        />
+
+        <Route
+          path="live"
+          element={
+            <PrivateRoute>
+              <Live />
+            </PrivateRoute>
           }
         />
         <Route
