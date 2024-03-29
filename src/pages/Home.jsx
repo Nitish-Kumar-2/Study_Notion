@@ -43,9 +43,11 @@ function Home() {
           <CTAButton active={true} linkto={"/signup"}>
             Learn More
           </CTAButton>
-          <CTAButton active={false} linkto={"/login"}>
-            Book a Demo
+          
+          <CTAButton active={false} linkto={"/Live"}>
+            Join the Class
           </CTAButton>
+
         </div>
         {/* Video */}
         <div className="mx-3 my-7 shadow-[10px_-5px_50px_-5px] shadow-blue-200">

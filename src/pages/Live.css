@@ -1,0 +1,146 @@
+.Live {
+    text-align: center;
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.container {
+    color: white;
+    width: 40%;
+    /* Adjust the width as needed */
+    margin: auto;
+    /* Center horizontally */
+    margin-top: 5%;
+    /* Center vertically */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #000814;
+    box-shadow: 0px 0px 20px 10px rgba(243, 242, 174, 0.1);
+    border: 1px solid #ffd60a;
+    display: flex;
+    flex-direction: column;
+    /* Use flexbox */
+    justify-content: center;
+    /* Center content horizontally */
+    align-items: center;
+    /* Center content vertically */
+}
+
+.Live {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #282c34;
+    /* Change the background color if needed */
+    color: white;
+}
+
+/* Rest of your CSS */
+
+.control-btn{
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #ffd60a;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.btn_live {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #ffd60a;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+h4{
+    color: #ccc;
+}
+
+
+input[type="text"] {
+    padding: 10px;
+    width: 95%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: black;
+}
+
+p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+video {
+    max-width: 100%;
+    height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.viewer-video {
+    width: 100%;
+    /* Adjust the width as needed */
+    height: auto;
+    /* Let the height adjust proportionally */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.control-btn {
+    padding: 8px 16px;
+    background-color: #ffd60a;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.control-btn:hover {
+    background-color: #eedd89;
+}
