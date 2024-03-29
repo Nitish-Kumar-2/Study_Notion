@@ -38,6 +38,7 @@ import { ACCOUNT_TYPE } from "./utils/constants";
 import Catalog from "./pages/Catalog";
 import CourseDetails from "./pages/CourseDetails";
 import Instructor from "./components/core/Dashboard/Instructor";
+import BotpressChatbot from "./components/common/BotpressChatbot"
 
 function App() {
   const dispatch = useDispatch();
@@ -177,6 +178,7 @@ function App() {
         {/* 404 Page */}
         <Route path="*" element={<Error />} />
       </Routes>
+      <div> <BotpressChatbot /></div>
     </div>
   );
 }
